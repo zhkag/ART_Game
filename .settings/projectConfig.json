@@ -7,5 +7,27 @@
 	"APILevel": "2",
 	"width": "240",
 	"height": "240",
-	"pixelTypeValue": "ARGB8888"
+	"pixelTypeValue": "ARGB8888",
+	"packageSetting": {
+		"before": {
+			"command": "",
+			"description": ""
+		},
+		"after": {
+			"command": "",
+			"description": ""
+		}
+	},
+	"download": {
+		"type": "0",
+		"portNumber": "COM11",
+		"baudRate": "115200",
+		"phoneIP": "",
+		"downloadDir": "/user/download",
+		"packageBeforeDownload": true,
+		"beforeDownload": {
+			"command": "",
+			"description": ""
+		}
+	}
 }

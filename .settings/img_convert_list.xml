@@ -32,6 +32,7 @@
   <file path="../src/res/images/gameover.png" format="rgb565"/>
   <file path="../src/res/images/game_2048.png" format="rgb565"/>
   <file path="../src/res/images/game_bird.png" format="rgb565"/>
+  <file path="../src/res/images/game_tetris.png" format="argb8888"/>
   <file path="../src/res/images/imageBox.png" format="original"/>
   <file path="../src/res/images/norImg.png" format="original"/>
   <file path="../src/res/images/score.png" format="argb8888"/>

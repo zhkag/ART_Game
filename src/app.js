@@ -1,6 +1,6 @@
 ﻿App({
-    // page: "pages/Game_list/Game_list",
-    page: "pages/Game_Tetris/Game_Tetris",
+    page: "pages/Game_list/Game_list",
+    // page: "pages/Game_Tetris/Game_Tetris",
     
     /* app 加载完成触发该函数 */
     onLaunch: function(event) {},

@@ -1,698 +1,960 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <rtgui>
   <class>Page</class>
-  <widget name="Game_Tetris" class="Page">
+  <widget name="Game_Tetris" class="Page" bindtouch="onPageTouch">
     <property name="rect">0, 0, 240, 240</property>
-    <property name="background">255, 28, 27, 26</property>
+    <property name="background">255, 180, 173, 169</property>
+    <property name="backgroundImg">images/black.png</property>
     <widgets>
-      <widget name="buttonRotate" class="button" bindtap="onButton">
+      <widget name="panel1" class="panel">
+        <property name="rect">0, 0, 240, 240</property>
+        <property name="background">255, 0, 0, 0</property>
+        <property name="backgroundImg">images/black.png</property>
+        <widgets>
+          <widget name="button1" class="button" bindtap="exitevent">
+            <property name="rect">8, 20, 30, 190</property>
+            <property name="foreground">0, 212, 208, 200</property>
+            <property name="background">0, 212, 208, 200</property>
+            <property name="font">fonts/youshe.ttf,15</property>
+            <property name="press"/>
+            <property name="longPressMs">500</property>
+            <property name="text">button1</property>
+            <property name="align">HORIZONTAL | VERTICAL</property>
+          </widget>
+          <widget name="nextChequer00" class="widget">
+            <property name="rect">155, 79, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="nextChequer01" class="widget">
+            <property name="rect">155, 69, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="nextChequer02" class="widget">
+            <property name="rect">155, 59, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="nextChequer03" class="widget">
+            <property name="rect">155, 49, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="nextChequer10" class="widget">
+            <property name="rect">165, 79, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="nextChequer11" class="widget">
+            <property name="rect">165, 69, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="nextChequer12" class="widget">
+            <property name="rect">165, 59, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="nextChequer13" class="widget">
+            <property name="rect">165, 49, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="nextChequer20" class="widget">
+            <property name="rect">175, 79, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="nextChequer21" class="widget">
+            <property name="rect">175, 69, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="nextChequer22" class="widget">
+            <property name="rect">175, 59, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="nextChequer23" class="widget">
+            <property name="rect">175, 49, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="nextChequer30" class="widget">
+            <property name="rect">185, 79, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="nextChequer31" class="widget">
+            <property name="rect">185, 69, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="nextChequer32" class="widget">
+            <property name="rect">185, 59, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="nextChequer33" class="widget">
+            <property name="rect">185, 49, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer00" class="widget">
+            <property name="rect">21, 211, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer01" class="widget">
+            <property name="rect">21, 201, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer02" class="widget">
+            <property name="rect">21, 191, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer03" class="widget">
+            <property name="rect">21, 181, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer04" class="widget">
+            <property name="rect">21, 171, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer05" class="widget">
+            <property name="rect">21, 161, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer06" class="widget">
+            <property name="rect">21, 151, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer07" class="widget">
+            <property name="rect">21, 141, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer08" class="widget">
+            <property name="rect">21, 131, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer09" class="widget">
+            <property name="rect">21, 121, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer010" class="widget">
+            <property name="rect">21, 111, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer011" class="widget">
+            <property name="rect">21, 101, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer012" class="widget">
+            <property name="rect">21, 91, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer013" class="widget">
+            <property name="rect">21, 81, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer014" class="widget">
+            <property name="rect">21, 71, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer015" class="widget">
+            <property name="rect">21, 61, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer016" class="widget">
+            <property name="rect">21, 51, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer017" class="widget">
+            <property name="rect">21, 41, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer018" class="widget">
+            <property name="rect">21, 31, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer019" class="widget">
+            <property name="rect">21, 21, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer10" class="widget">
+            <property name="rect">31, 211, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer11" class="widget">
+            <property name="rect">31, 201, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer12" class="widget">
+            <property name="rect">31, 191, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer13" class="widget">
+            <property name="rect">31, 181, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer14" class="widget">
+            <property name="rect">31, 171, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer15" class="widget">
+            <property name="rect">31, 161, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer16" class="widget">
+            <property name="rect">31, 151, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer17" class="widget">
+            <property name="rect">31, 141, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer18" class="widget">
+            <property name="rect">31, 131, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer19" class="widget">
+            <property name="rect">31, 121, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer110" class="widget">
+            <property name="rect">31, 111, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer111" class="widget">
+            <property name="rect">31, 101, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer112" class="widget">
+            <property name="rect">31, 91, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer113" class="widget">
+            <property name="rect">31, 81, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer114" class="widget">
+            <property name="rect">31, 71, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer115" class="widget">
+            <property name="rect">31, 61, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer116" class="widget">
+            <property name="rect">31, 51, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer117" class="widget">
+            <property name="rect">31, 41, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer118" class="widget">
+            <property name="rect">31, 31, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer119" class="widget">
+            <property name="rect">31, 21, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer20" class="widget">
+            <property name="rect">41, 211, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer21" class="widget">
+            <property name="rect">41, 201, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer22" class="widget">
+            <property name="rect">41, 191, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer23" class="widget">
+            <property name="rect">41, 181, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer24" class="widget">
+            <property name="rect">41, 171, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer25" class="widget">
+            <property name="rect">41, 161, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer26" class="widget">
+            <property name="rect">41, 151, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer27" class="widget">
+            <property name="rect">41, 141, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer28" class="widget">
+            <property name="rect">41, 131, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer29" class="widget">
+            <property name="rect">41, 121, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer210" class="widget">
+            <property name="rect">41, 111, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer211" class="widget">
+            <property name="rect">41, 101, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer212" class="widget">
+            <property name="rect">41, 91, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer213" class="widget">
+            <property name="rect">41, 81, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer214" class="widget">
+            <property name="rect">41, 71, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer215" class="widget">
+            <property name="rect">41, 61, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer216" class="widget">
+            <property name="rect">41, 51, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer217" class="widget">
+            <property name="rect">41, 41, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer218" class="widget">
+            <property name="rect">41, 31, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer219" class="widget">
+            <property name="rect">41, 21, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer30" class="widget">
+            <property name="rect">51, 211, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer31" class="widget">
+            <property name="rect">51, 201, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer32" class="widget">
+            <property name="rect">51, 191, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer33" class="widget">
+            <property name="rect">51, 181, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer34" class="widget">
+            <property name="rect">51, 171, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer35" class="widget">
+            <property name="rect">51, 161, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer36" class="widget">
+            <property name="rect">51, 151, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer37" class="widget">
+            <property name="rect">51, 141, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer38" class="widget">
+            <property name="rect">51, 131, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer39" class="widget">
+            <property name="rect">51, 121, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer310" class="widget">
+            <property name="rect">51, 111, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer311" class="widget">
+            <property name="rect">51, 101, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer312" class="widget">
+            <property name="rect">51, 91, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer313" class="widget">
+            <property name="rect">51, 81, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer314" class="widget">
+            <property name="rect">51, 71, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer315" class="widget">
+            <property name="rect">51, 61, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer316" class="widget">
+            <property name="rect">51, 51, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer317" class="widget">
+            <property name="rect">51, 41, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer318" class="widget">
+            <property name="rect">51, 31, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer319" class="widget">
+            <property name="rect">51, 21, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer40" class="widget">
+            <property name="rect">61, 211, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer41" class="widget">
+            <property name="rect">61, 201, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer42" class="widget">
+            <property name="rect">61, 191, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer43" class="widget">
+            <property name="rect">61, 181, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer44" class="widget">
+            <property name="rect">61, 171, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer45" class="widget">
+            <property name="rect">61, 161, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer46" class="widget">
+            <property name="rect">61, 151, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer47" class="widget">
+            <property name="rect">61, 141, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer48" class="widget">
+            <property name="rect">61, 131, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer49" class="widget">
+            <property name="rect">61, 121, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer410" class="widget">
+            <property name="rect">61, 111, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer411" class="widget">
+            <property name="rect">61, 101, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer412" class="widget">
+            <property name="rect">61, 91, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer413" class="widget">
+            <property name="rect">61, 81, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer414" class="widget">
+            <property name="rect">61, 71, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer415" class="widget">
+            <property name="rect">61, 61, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer416" class="widget">
+            <property name="rect">61, 51, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer417" class="widget">
+            <property name="rect">61, 41, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer418" class="widget">
+            <property name="rect">61, 31, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer419" class="widget">
+            <property name="rect">61, 21, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer50" class="widget">
+            <property name="rect">71, 211, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer51" class="widget">
+            <property name="rect">71, 201, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer52" class="widget">
+            <property name="rect">71, 191, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer53" class="widget">
+            <property name="rect">71, 181, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer54" class="widget">
+            <property name="rect">71, 171, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer55" class="widget">
+            <property name="rect">71, 161, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer56" class="widget">
+            <property name="rect">71, 151, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer57" class="widget">
+            <property name="rect">71, 141, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer58" class="widget">
+            <property name="rect">71, 131, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer59" class="widget">
+            <property name="rect">71, 121, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer510" class="widget">
+            <property name="rect">71, 111, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer511" class="widget">
+            <property name="rect">71, 101, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer512" class="widget">
+            <property name="rect">71, 91, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer513" class="widget">
+            <property name="rect">71, 81, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer514" class="widget">
+            <property name="rect">71, 71, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer515" class="widget">
+            <property name="rect">71, 61, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer516" class="widget">
+            <property name="rect">71, 51, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer517" class="widget">
+            <property name="rect">71, 41, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer518" class="widget">
+            <property name="rect">71, 31, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer519" class="widget">
+            <property name="rect">71, 21, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer60" class="widget">
+            <property name="rect">81, 211, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer61" class="widget">
+            <property name="rect">81, 201, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer62" class="widget">
+            <property name="rect">81, 191, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer63" class="widget">
+            <property name="rect">81, 181, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer64" class="widget">
+            <property name="rect">81, 171, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer65" class="widget">
+            <property name="rect">81, 161, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer66" class="widget">
+            <property name="rect">81, 151, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer67" class="widget">
+            <property name="rect">81, 141, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer68" class="widget">
+            <property name="rect">81, 131, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer69" class="widget">
+            <property name="rect">81, 121, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer610" class="widget">
+            <property name="rect">81, 111, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer611" class="widget">
+            <property name="rect">81, 101, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer612" class="widget">
+            <property name="rect">81, 91, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer613" class="widget">
+            <property name="rect">81, 81, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer614" class="widget">
+            <property name="rect">81, 71, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer615" class="widget">
+            <property name="rect">81, 61, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer616" class="widget">
+            <property name="rect">81, 51, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer617" class="widget">
+            <property name="rect">81, 41, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer618" class="widget">
+            <property name="rect">81, 31, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer619" class="widget">
+            <property name="rect">81, 21, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer70" class="widget">
+            <property name="rect">91, 211, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer71" class="widget">
+            <property name="rect">91, 201, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer72" class="widget">
+            <property name="rect">91, 191, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer73" class="widget">
+            <property name="rect">91, 181, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer74" class="widget">
+            <property name="rect">91, 171, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer75" class="widget">
+            <property name="rect">91, 161, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer76" class="widget">
+            <property name="rect">91, 151, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer77" class="widget">
+            <property name="rect">91, 141, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer78" class="widget">
+            <property name="rect">91, 131, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer79" class="widget">
+            <property name="rect">91, 121, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer710" class="widget">
+            <property name="rect">91, 111, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer711" class="widget">
+            <property name="rect">91, 101, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer712" class="widget">
+            <property name="rect">91, 91, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer713" class="widget">
+            <property name="rect">91, 81, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer714" class="widget">
+            <property name="rect">91, 71, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer715" class="widget">
+            <property name="rect">91, 61, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer716" class="widget">
+            <property name="rect">91, 51, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer717" class="widget">
+            <property name="rect">91, 41, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer718" class="widget">
+            <property name="rect">91, 31, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer719" class="widget">
+            <property name="rect">91, 21, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer80" class="widget">
+            <property name="rect">101, 211, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer81" class="widget">
+            <property name="rect">101, 201, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer82" class="widget">
+            <property name="rect">101, 191, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer83" class="widget">
+            <property name="rect">101, 181, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer84" class="widget">
+            <property name="rect">101, 171, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer85" class="widget">
+            <property name="rect">101, 161, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer86" class="widget">
+            <property name="rect">101, 151, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer87" class="widget">
+            <property name="rect">101, 141, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer88" class="widget">
+            <property name="rect">101, 131, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer89" class="widget">
+            <property name="rect">101, 121, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer810" class="widget">
+            <property name="rect">101, 111, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer811" class="widget">
+            <property name="rect">101, 101, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer812" class="widget">
+            <property name="rect">101, 91, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer813" class="widget">
+            <property name="rect">101, 81, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer814" class="widget">
+            <property name="rect">101, 71, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer815" class="widget">
+            <property name="rect">101, 61, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer816" class="widget">
+            <property name="rect">101, 51, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer817" class="widget">
+            <property name="rect">101, 41, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer818" class="widget">
+            <property name="rect">101, 31, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer819" class="widget">
+            <property name="rect">101, 21, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer90" class="widget">
+            <property name="rect">111, 211, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer91" class="widget">
+            <property name="rect">111, 201, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer92" class="widget">
+            <property name="rect">111, 191, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer93" class="widget">
+            <property name="rect">111, 181, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer94" class="widget">
+            <property name="rect">111, 171, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer95" class="widget">
+            <property name="rect">111, 161, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer96" class="widget">
+            <property name="rect">111, 151, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer97" class="widget">
+            <property name="rect">111, 141, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer98" class="widget">
+            <property name="rect">111, 131, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer99" class="widget">
+            <property name="rect">111, 121, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer910" class="widget">
+            <property name="rect">111, 111, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer911" class="widget">
+            <property name="rect">111, 101, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer912" class="widget">
+            <property name="rect">111, 91, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer913" class="widget">
+            <property name="rect">111, 81, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer914" class="widget">
+            <property name="rect">111, 71, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer915" class="widget">
+            <property name="rect">111, 61, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer916" class="widget">
+            <property name="rect">111, 51, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer917" class="widget">
+            <property name="rect">111, 41, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer918" class="widget">
+            <property name="rect">111, 31, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="chequer919" class="widget">
+            <property name="rect">111, 21, 9, 9</property>
+            <property name="background">255, 146, 143, 140</property>
+          </widget>
+          <widget name="label1" class="label">
+            <property name="rect">140, 3, 71, 30</property>
+            <property name="foreground">255, 255, 10, 10</property>
+            <property name="background">255, 212, 208, 200</property>
+            <property name="font">/system/fonts/HYQIHEI-55J.TTF,16</property>
+            <property name="text">next</property>
+            <property name="align">HORIZONTAL | VERTICAL</property>
+          </widget>
+          <widget name="label2" class="label">
+            <property name="rect">146, 105, 59, 30</property>
+            <property name="foreground">255, 255, 3, 3</property>
+            <property name="background">255, 212, 208, 200</property>
+            <property name="font">/system/fonts/HYQIHEI-55J.TTF,16</property>
+            <property name="text">score</property>
+            <property name="align">HORIZONTAL | VERTICAL</property>
+          </widget>
+          <widget name="score" class="label">
+            <property name="rect">132, 175, 82, 30</property>
+            <property name="foreground">255, 0, 0, 0</property>
+            <property name="background">255, 212, 208, 200</property>
+            <property name="font">/system/fonts/HYQIHEI-55J.TTF,16</property>
+            <property name="text">score</property>
+            <property name="align">HORIZONTAL | VERTICAL</property>
+          </widget>
+        </widgets>
+      </widget>
+      <widget name="rotateButton" class="button" bindtap="onButton">
         <property name="rect">152, 140, 30, 30</property>
         <property name="foreground">255, 0, 0, 0</property>
         <property name="background">255, 212, 208, 200</property>
         <property name="font">/system/fonts/HYQIHEI-55J.TTF,16</property>
+        <property name="hide"/>
         <property name="longPressMs">100</property>
-        <property name="text">Rotate</property>
+        <property name="text">rotate</property>
         <property name="norImg">images/norImg.png</property>
         <property name="downImg">images/downImg.png</property>
         <property name="align">HORIZONTAL | VERTICAL</property>
       </widget>
-      <widget name="nextChequer00" class="widget">
-        <property name="rect">130, 70, 9, 9</property>
-      </widget>
-      <widget name="nextChequer01" class="widget">
-        <property name="rect">130, 60, 9, 9</property>
-      </widget>
-      <widget name="nextChequer02" class="widget">
-        <property name="rect">130, 50, 9, 9</property>
-      </widget>
-      <widget name="nextChequer03" class="widget">
-        <property name="rect">130, 40, 9, 9</property>
-      </widget>
-      <widget name="nextChequer10" class="widget">
-        <property name="rect">140, 70, 9, 9</property>
-      </widget>
-      <widget name="nextChequer11" class="widget">
-        <property name="rect">140, 60, 9, 9</property>
-      </widget>
-      <widget name="nextChequer12" class="widget">
-        <property name="rect">140, 50, 9, 9</property>
-      </widget>
-      <widget name="nextChequer13" class="widget">
-        <property name="rect">140, 40, 9, 9</property>
-      </widget>
-      <widget name="nextChequer20" class="widget">
-        <property name="rect">150, 70, 9, 9</property>
-      </widget>
-      <widget name="nextChequer21" class="widget">
-        <property name="rect">150, 60, 9, 9</property>
-      </widget>
-      <widget name="nextChequer22" class="widget">
-        <property name="rect">150, 50, 9, 9</property>
-      </widget>
-      <widget name="nextChequer23" class="widget">
-        <property name="rect">150, 40, 9, 9</property>
-      </widget>
-      <widget name="nextChequer30" class="widget">
-        <property name="rect">160, 70, 9, 9</property>
-      </widget>
-      <widget name="nextChequer31" class="widget">
-        <property name="rect">160, 60, 9, 9</property>
-      </widget>
-      <widget name="nextChequer32" class="widget">
-        <property name="rect">160, 50, 9, 9</property>
-      </widget>
-      <widget name="nextChequer33" class="widget">
-        <property name="rect">160, 40, 9, 9</property>
-      </widget>
-      <widget name="chequer00" class="widget">
-        <property name="rect">0, 200, 9, 9</property>
-      </widget>
-      <widget name="chequer01" class="widget">
-        <property name="rect">0, 190, 9, 9</property>
-      </widget>
-      <widget name="chequer02" class="widget">
-        <property name="rect">0, 180, 9, 9</property>
-      </widget>
-      <widget name="chequer03" class="widget">
-        <property name="rect">0, 170, 9, 9</property>
-      </widget>
-      <widget name="chequer04" class="widget">
-        <property name="rect">0, 160, 9, 9</property>
-      </widget>
-      <widget name="chequer05" class="widget">
-        <property name="rect">0, 150, 9, 9</property>
-      </widget>
-      <widget name="chequer06" class="widget">
-        <property name="rect">0, 140, 9, 9</property>
-      </widget>
-      <widget name="chequer07" class="widget">
-        <property name="rect">0, 130, 9, 9</property>
-      </widget>
-      <widget name="chequer08" class="widget">
-        <property name="rect">0, 120, 9, 9</property>
-      </widget>
-      <widget name="chequer09" class="widget">
-        <property name="rect">0, 110, 9, 9</property>
-      </widget>
-      <widget name="chequer010" class="widget">
-        <property name="rect">0, 100, 9, 9</property>
-      </widget>
-      <widget name="chequer011" class="widget">
-        <property name="rect">0, 90, 9, 9</property>
-      </widget>
-      <widget name="chequer012" class="widget">
-        <property name="rect">0, 80, 9, 9</property>
-      </widget>
-      <widget name="chequer013" class="widget">
-        <property name="rect">0, 70, 9, 9</property>
-      </widget>
-      <widget name="chequer014" class="widget">
-        <property name="rect">0, 60, 9, 9</property>
-      </widget>
-      <widget name="chequer015" class="widget">
-        <property name="rect">0, 50, 9, 9</property>
-      </widget>
-      <widget name="chequer016" class="widget">
-        <property name="rect">0, 40, 9, 9</property>
-      </widget>
-      <widget name="chequer017" class="widget">
-        <property name="rect">0, 30, 9, 9</property>
-      </widget>
-      <widget name="chequer018" class="widget">
-        <property name="rect">0, 20, 9, 9</property>
-      </widget>
-      <widget name="chequer019" class="widget">
-        <property name="rect">0, 10, 9, 9</property>
-      </widget>
-      <widget name="chequer10" class="widget">
-        <property name="rect">10, 200, 9, 9</property>
-      </widget>
-      <widget name="chequer11" class="widget">
-        <property name="rect">10, 190, 9, 9</property>
-      </widget>
-      <widget name="chequer12" class="widget">
-        <property name="rect">10, 180, 9, 9</property>
-      </widget>
-      <widget name="chequer13" class="widget">
-        <property name="rect">10, 170, 9, 9</property>
-      </widget>
-      <widget name="chequer14" class="widget">
-        <property name="rect">10, 160, 9, 9</property>
-      </widget>
-      <widget name="chequer15" class="widget">
-        <property name="rect">10, 150, 9, 9</property>
-      </widget>
-      <widget name="chequer16" class="widget">
-        <property name="rect">10, 140, 9, 9</property>
-      </widget>
-      <widget name="chequer17" class="widget">
-        <property name="rect">10, 130, 9, 9</property>
-      </widget>
-      <widget name="chequer18" class="widget">
-        <property name="rect">10, 120, 9, 9</property>
-      </widget>
-      <widget name="chequer19" class="widget">
-        <property name="rect">10, 110, 9, 9</property>
-      </widget>
-      <widget name="chequer110" class="widget">
-        <property name="rect">10, 100, 9, 9</property>
-      </widget>
-      <widget name="chequer111" class="widget">
-        <property name="rect">10, 90, 9, 9</property>
-      </widget>
-      <widget name="chequer112" class="widget">
-        <property name="rect">10, 80, 9, 9</property>
-      </widget>
-      <widget name="chequer113" class="widget">
-        <property name="rect">10, 70, 9, 9</property>
-      </widget>
-      <widget name="chequer114" class="widget">
-        <property name="rect">10, 60, 9, 9</property>
-      </widget>
-      <widget name="chequer115" class="widget">
-        <property name="rect">10, 50, 9, 9</property>
-      </widget>
-      <widget name="chequer116" class="widget">
-        <property name="rect">10, 40, 9, 9</property>
-      </widget>
-      <widget name="chequer117" class="widget">
-        <property name="rect">10, 30, 9, 9</property>
-      </widget>
-      <widget name="chequer118" class="widget">
-        <property name="rect">10, 20, 9, 9</property>
-      </widget>
-      <widget name="chequer119" class="widget">
-        <property name="rect">10, 10, 9, 9</property>
-      </widget>
-      <widget name="chequer20" class="widget">
-        <property name="rect">20, 200, 9, 9</property>
-      </widget>
-      <widget name="chequer21" class="widget">
-        <property name="rect">20, 190, 9, 9</property>
-      </widget>
-      <widget name="chequer22" class="widget">
-        <property name="rect">20, 180, 9, 9</property>
-      </widget>
-      <widget name="chequer23" class="widget">
-        <property name="rect">20, 170, 9, 9</property>
-      </widget>
-      <widget name="chequer24" class="widget">
-        <property name="rect">20, 160, 9, 9</property>
-      </widget>
-      <widget name="chequer25" class="widget">
-        <property name="rect">20, 150, 9, 9</property>
-      </widget>
-      <widget name="chequer26" class="widget">
-        <property name="rect">20, 140, 9, 9</property>
-      </widget>
-      <widget name="chequer27" class="widget">
-        <property name="rect">20, 130, 9, 9</property>
-      </widget>
-      <widget name="chequer28" class="widget">
-        <property name="rect">20, 120, 9, 9</property>
-      </widget>
-      <widget name="chequer29" class="widget">
-        <property name="rect">20, 110, 9, 9</property>
-      </widget>
-      <widget name="chequer210" class="widget">
-        <property name="rect">20, 100, 9, 9</property>
-      </widget>
-      <widget name="chequer211" class="widget">
-        <property name="rect">20, 90, 9, 9</property>
-      </widget>
-      <widget name="chequer212" class="widget">
-        <property name="rect">20, 80, 9, 9</property>
-      </widget>
-      <widget name="chequer213" class="widget">
-        <property name="rect">20, 70, 9, 9</property>
-      </widget>
-      <widget name="chequer214" class="widget">
-        <property name="rect">20, 60, 9, 9</property>
-      </widget>
-      <widget name="chequer215" class="widget">
-        <property name="rect">20, 50, 9, 9</property>
-      </widget>
-      <widget name="chequer216" class="widget">
-        <property name="rect">20, 40, 9, 9</property>
-      </widget>
-      <widget name="chequer217" class="widget">
-        <property name="rect">20, 30, 9, 9</property>
-      </widget>
-      <widget name="chequer218" class="widget">
-        <property name="rect">20, 20, 9, 9</property>
-      </widget>
-      <widget name="chequer219" class="widget">
-        <property name="rect">20, 10, 9, 9</property>
-      </widget>
-      <widget name="chequer30" class="widget">
-        <property name="rect">30, 200, 9, 9</property>
-      </widget>
-      <widget name="chequer31" class="widget">
-        <property name="rect">30, 190, 9, 9</property>
-      </widget>
-      <widget name="chequer32" class="widget">
-        <property name="rect">30, 180, 9, 9</property>
-      </widget>
-      <widget name="chequer33" class="widget">
-        <property name="rect">30, 170, 9, 9</property>
-      </widget>
-      <widget name="chequer34" class="widget">
-        <property name="rect">30, 160, 9, 9</property>
-      </widget>
-      <widget name="chequer35" class="widget">
-        <property name="rect">30, 150, 9, 9</property>
-      </widget>
-      <widget name="chequer36" class="widget">
-        <property name="rect">30, 140, 9, 9</property>
-      </widget>
-      <widget name="chequer37" class="widget">
-        <property name="rect">30, 130, 9, 9</property>
-      </widget>
-      <widget name="chequer38" class="widget">
-        <property name="rect">30, 120, 9, 9</property>
-      </widget>
-      <widget name="chequer39" class="widget">
-        <property name="rect">30, 110, 9, 9</property>
-      </widget>
-      <widget name="chequer310" class="widget">
-        <property name="rect">30, 100, 9, 9</property>
-      </widget>
-      <widget name="chequer311" class="widget">
-        <property name="rect">30, 90, 9, 9</property>
-      </widget>
-      <widget name="chequer312" class="widget">
-        <property name="rect">30, 80, 9, 9</property>
-      </widget>
-      <widget name="chequer313" class="widget">
-        <property name="rect">30, 70, 9, 9</property>
-      </widget>
-      <widget name="chequer314" class="widget">
-        <property name="rect">30, 60, 9, 9</property>
-      </widget>
-      <widget name="chequer315" class="widget">
-        <property name="rect">30, 50, 9, 9</property>
-      </widget>
-      <widget name="chequer316" class="widget">
-        <property name="rect">30, 40, 9, 9</property>
-      </widget>
-      <widget name="chequer317" class="widget">
-        <property name="rect">30, 30, 9, 9</property>
-      </widget>
-      <widget name="chequer318" class="widget">
-        <property name="rect">30, 20, 9, 9</property>
-      </widget>
-      <widget name="chequer319" class="widget">
-        <property name="rect">30, 10, 9, 9</property>
-      </widget>
-      <widget name="chequer40" class="widget">
-        <property name="rect">40, 200, 9, 9</property>
-      </widget>
-      <widget name="chequer41" class="widget">
-        <property name="rect">40, 190, 9, 9</property>
-      </widget>
-      <widget name="chequer42" class="widget">
-        <property name="rect">40, 180, 9, 9</property>
-      </widget>
-      <widget name="chequer43" class="widget">
-        <property name="rect">40, 170, 9, 9</property>
-      </widget>
-      <widget name="chequer44" class="widget">
-        <property name="rect">40, 160, 9, 9</property>
-      </widget>
-      <widget name="chequer45" class="widget">
-        <property name="rect">40, 150, 9, 9</property>
-      </widget>
-      <widget name="chequer46" class="widget">
-        <property name="rect">40, 140, 9, 9</property>
-      </widget>
-      <widget name="chequer47" class="widget">
-        <property name="rect">40, 130, 9, 9</property>
-      </widget>
-      <widget name="chequer48" class="widget">
-        <property name="rect">40, 120, 9, 9</property>
-      </widget>
-      <widget name="chequer49" class="widget">
-        <property name="rect">40, 110, 9, 9</property>
-      </widget>
-      <widget name="chequer410" class="widget">
-        <property name="rect">40, 100, 9, 9</property>
-      </widget>
-      <widget name="chequer411" class="widget">
-        <property name="rect">40, 90, 9, 9</property>
-      </widget>
-      <widget name="chequer412" class="widget">
-        <property name="rect">40, 80, 9, 9</property>
-      </widget>
-      <widget name="chequer413" class="widget">
-        <property name="rect">40, 70, 9, 9</property>
-      </widget>
-      <widget name="chequer414" class="widget">
-        <property name="rect">40, 60, 9, 9</property>
-      </widget>
-      <widget name="chequer415" class="widget">
-        <property name="rect">40, 50, 9, 9</property>
-      </widget>
-      <widget name="chequer416" class="widget">
-        <property name="rect">40, 40, 9, 9</property>
-      </widget>
-      <widget name="chequer417" class="widget">
-        <property name="rect">40, 30, 9, 9</property>
-      </widget>
-      <widget name="chequer418" class="widget">
-        <property name="rect">40, 20, 9, 9</property>
-      </widget>
-      <widget name="chequer419" class="widget">
-        <property name="rect">40, 10, 9, 9</property>
-      </widget>
-      <widget name="chequer50" class="widget">
-        <property name="rect">50, 200, 9, 9</property>
-      </widget>
-      <widget name="chequer51" class="widget">
-        <property name="rect">50, 190, 9, 9</property>
-      </widget>
-      <widget name="chequer52" class="widget">
-        <property name="rect">50, 180, 9, 9</property>
-      </widget>
-      <widget name="chequer53" class="widget">
-        <property name="rect">50, 170, 9, 9</property>
-      </widget>
-      <widget name="chequer54" class="widget">
-        <property name="rect">50, 160, 9, 9</property>
-      </widget>
-      <widget name="chequer55" class="widget">
-        <property name="rect">50, 150, 9, 9</property>
-      </widget>
-      <widget name="chequer56" class="widget">
-        <property name="rect">50, 140, 9, 9</property>
-      </widget>
-      <widget name="chequer57" class="widget">
-        <property name="rect">50, 130, 9, 9</property>
-      </widget>
-      <widget name="chequer58" class="widget">
-        <property name="rect">50, 120, 9, 9</property>
-      </widget>
-      <widget name="chequer59" class="widget">
-        <property name="rect">50, 110, 9, 9</property>
-      </widget>
-      <widget name="chequer510" class="widget">
-        <property name="rect">50, 100, 9, 9</property>
-      </widget>
-      <widget name="chequer511" class="widget">
-        <property name="rect">50, 90, 9, 9</property>
-      </widget>
-      <widget name="chequer512" class="widget">
-        <property name="rect">50, 80, 9, 9</property>
-      </widget>
-      <widget name="chequer513" class="widget">
-        <property name="rect">50, 70, 9, 9</property>
-      </widget>
-      <widget name="chequer514" class="widget">
-        <property name="rect">50, 60, 9, 9</property>
-      </widget>
-      <widget name="chequer515" class="widget">
-        <property name="rect">50, 50, 9, 9</property>
-      </widget>
-      <widget name="chequer516" class="widget">
-        <property name="rect">50, 40, 9, 9</property>
-      </widget>
-      <widget name="chequer517" class="widget">
-        <property name="rect">50, 30, 9, 9</property>
-      </widget>
-      <widget name="chequer518" class="widget">
-        <property name="rect">50, 20, 9, 9</property>
-      </widget>
-      <widget name="chequer519" class="widget">
-        <property name="rect">50, 10, 9, 9</property>
-      </widget>
-      <widget name="chequer60" class="widget">
-        <property name="rect">60, 200, 9, 9</property>
-      </widget>
-      <widget name="chequer61" class="widget">
-        <property name="rect">60, 190, 9, 9</property>
-      </widget>
-      <widget name="chequer62" class="widget">
-        <property name="rect">60, 180, 9, 9</property>
-      </widget>
-      <widget name="chequer63" class="widget">
-        <property name="rect">60, 170, 9, 9</property>
-      </widget>
-      <widget name="chequer64" class="widget">
-        <property name="rect">60, 160, 9, 9</property>
-      </widget>
-      <widget name="chequer65" class="widget">
-        <property name="rect">60, 150, 9, 9</property>
-      </widget>
-      <widget name="chequer66" class="widget">
-        <property name="rect">60, 140, 9, 9</property>
-      </widget>
-      <widget name="chequer67" class="widget">
-        <property name="rect">60, 130, 9, 9</property>
-      </widget>
-      <widget name="chequer68" class="widget">
-        <property name="rect">60, 120, 9, 9</property>
-      </widget>
-      <widget name="chequer69" class="widget">
-        <property name="rect">60, 110, 9, 9</property>
-      </widget>
-      <widget name="chequer610" class="widget">
-        <property name="rect">60, 100, 9, 9</property>
-      </widget>
-      <widget name="chequer611" class="widget">
-        <property name="rect">60, 90, 9, 9</property>
-      </widget>
-      <widget name="chequer612" class="widget">
-        <property name="rect">60, 80, 9, 9</property>
-      </widget>
-      <widget name="chequer613" class="widget">
-        <property name="rect">60, 70, 9, 9</property>
-      </widget>
-      <widget name="chequer614" class="widget">
-        <property name="rect">60, 60, 9, 9</property>
-      </widget>
-      <widget name="chequer615" class="widget">
-        <property name="rect">60, 50, 9, 9</property>
-      </widget>
-      <widget name="chequer616" class="widget">
-        <property name="rect">60, 40, 9, 9</property>
-      </widget>
-      <widget name="chequer617" class="widget">
-        <property name="rect">60, 30, 9, 9</property>
-      </widget>
-      <widget name="chequer618" class="widget">
-        <property name="rect">60, 20, 9, 9</property>
-      </widget>
-      <widget name="chequer619" class="widget">
-        <property name="rect">60, 10, 9, 9</property>
-      </widget>
-      <widget name="chequer70" class="widget">
-        <property name="rect">70, 200, 9, 9</property>
-      </widget>
-      <widget name="chequer71" class="widget">
-        <property name="rect">70, 190, 9, 9</property>
-      </widget>
-      <widget name="chequer72" class="widget">
-        <property name="rect">70, 180, 9, 9</property>
-      </widget>
-      <widget name="chequer73" class="widget">
-        <property name="rect">70, 170, 9, 9</property>
-      </widget>
-      <widget name="chequer74" class="widget">
-        <property name="rect">70, 160, 9, 9</property>
-      </widget>
-      <widget name="chequer75" class="widget">
-        <property name="rect">70, 150, 9, 9</property>
-      </widget>
-      <widget name="chequer76" class="widget">
-        <property name="rect">70, 140, 9, 9</property>
-      </widget>
-      <widget name="chequer77" class="widget">
-        <property name="rect">70, 130, 9, 9</property>
-      </widget>
-      <widget name="chequer78" class="widget">
-        <property name="rect">70, 120, 9, 9</property>
-      </widget>
-      <widget name="chequer79" class="widget">
-        <property name="rect">70, 110, 9, 9</property>
-      </widget>
-      <widget name="chequer710" class="widget">
-        <property name="rect">70, 100, 9, 9</property>
-      </widget>
-      <widget name="chequer711" class="widget">
-        <property name="rect">70, 90, 9, 9</property>
-      </widget>
-      <widget name="chequer712" class="widget">
-        <property name="rect">70, 80, 9, 9</property>
-      </widget>
-      <widget name="chequer713" class="widget">
-        <property name="rect">70, 70, 9, 9</property>
-      </widget>
-      <widget name="chequer714" class="widget">
-        <property name="rect">70, 60, 9, 9</property>
-      </widget>
-      <widget name="chequer715" class="widget">
-        <property name="rect">70, 50, 9, 9</property>
-      </widget>
-      <widget name="chequer716" class="widget">
-        <property name="rect">70, 40, 9, 9</property>
-      </widget>
-      <widget name="chequer717" class="widget">
-        <property name="rect">70, 30, 9, 9</property>
-      </widget>
-      <widget name="chequer718" class="widget">
-        <property name="rect">70, 20, 9, 9</property>
-      </widget>
-      <widget name="chequer719" class="widget">
-        <property name="rect">70, 10, 9, 9</property>
-      </widget>
-      <widget name="chequer80" class="widget">
-        <property name="rect">80, 200, 9, 9</property>
-      </widget>
-      <widget name="chequer81" class="widget">
-        <property name="rect">80, 190, 9, 9</property>
-      </widget>
-      <widget name="chequer82" class="widget">
-        <property name="rect">80, 180, 9, 9</property>
-      </widget>
-      <widget name="chequer83" class="widget">
-        <property name="rect">80, 170, 9, 9</property>
-      </widget>
-      <widget name="chequer84" class="widget">
-        <property name="rect">80, 160, 9, 9</property>
-      </widget>
-      <widget name="chequer85" class="widget">
-        <property name="rect">80, 150, 9, 9</property>
-      </widget>
-      <widget name="chequer86" class="widget">
-        <property name="rect">80, 140, 9, 9</property>
-      </widget>
-      <widget name="chequer87" class="widget">
-        <property name="rect">80, 130, 9, 9</property>
-      </widget>
-      <widget name="chequer88" class="widget">
-        <property name="rect">80, 120, 9, 9</property>
-      </widget>
-      <widget name="chequer89" class="widget">
-        <property name="rect">80, 110, 9, 9</property>
-      </widget>
-      <widget name="chequer810" class="widget">
-        <property name="rect">80, 100, 9, 9</property>
-      </widget>
-      <widget name="chequer811" class="widget">
-        <property name="rect">80, 90, 9, 9</property>
-      </widget>
-      <widget name="chequer812" class="widget">
-        <property name="rect">80, 80, 9, 9</property>
-      </widget>
-      <widget name="chequer813" class="widget">
-        <property name="rect">80, 70, 9, 9</property>
-      </widget>
-      <widget name="chequer814" class="widget">
-        <property name="rect">80, 60, 9, 9</property>
-      </widget>
-      <widget name="chequer815" class="widget">
-        <property name="rect">80, 50, 9, 9</property>
-      </widget>
-      <widget name="chequer816" class="widget">
-        <property name="rect">80, 40, 9, 9</property>
-      </widget>
-      <widget name="chequer817" class="widget">
-        <property name="rect">80, 30, 9, 9</property>
-      </widget>
-      <widget name="chequer818" class="widget">
-        <property name="rect">80, 20, 9, 9</property>
-      </widget>
-      <widget name="chequer819" class="widget">
-        <property name="rect">80, 10, 9, 9</property>
-      </widget>
-      <widget name="chequer90" class="widget">
-        <property name="rect">90, 200, 9, 9</property>
-      </widget>
-      <widget name="chequer91" class="widget">
-        <property name="rect">90, 190, 9, 9</property>
-      </widget>
-      <widget name="chequer92" class="widget">
-        <property name="rect">90, 180, 9, 9</property>
-      </widget>
-      <widget name="chequer93" class="widget">
-        <property name="rect">90, 170, 9, 9</property>
-      </widget>
-      <widget name="chequer94" class="widget">
-        <property name="rect">90, 160, 9, 9</property>
-      </widget>
-      <widget name="chequer95" class="widget">
-        <property name="rect">90, 150, 9, 9</property>
-      </widget>
-      <widget name="chequer96" class="widget">
-        <property name="rect">90, 140, 9, 9</property>
-      </widget>
-      <widget name="chequer97" class="widget">
-        <property name="rect">90, 130, 9, 9</property>
-      </widget>
-      <widget name="chequer98" class="widget">
-        <property name="rect">90, 120, 9, 9</property>
-      </widget>
-      <widget name="chequer99" class="widget">
-        <property name="rect">90, 110, 9, 9</property>
-      </widget>
-      <widget name="chequer910" class="widget">
-        <property name="rect">90, 100, 9, 9</property>
-      </widget>
-      <widget name="chequer911" class="widget">
-        <property name="rect">90, 90, 9, 9</property>
-      </widget>
-      <widget name="chequer912" class="widget">
-        <property name="rect">90, 80, 9, 9</property>
-      </widget>
-      <widget name="chequer913" class="widget">
-        <property name="rect">90, 70, 9, 9</property>
-      </widget>
-      <widget name="chequer914" class="widget">
-        <property name="rect">90, 60, 9, 9</property>
-      </widget>
-      <widget name="chequer915" class="widget">
-        <property name="rect">90, 50, 9, 9</property>
-      </widget>
-      <widget name="chequer916" class="widget">
-        <property name="rect">90, 40, 9, 9</property>
-      </widget>
-      <widget name="chequer917" class="widget">
-        <property name="rect">90, 30, 9, 9</property>
-      </widget>
-      <widget name="chequer918" class="widget">
-        <property name="rect">90, 20, 9, 9</property>
-      </widget>
-      <widget name="chequer919" class="widget">
-        <property name="rect">90, 10, 9, 9</property>
-      </widget>
-      <widget name="buttonLeft" class="button" bindtap="onButton">
+      <widget name="leftButton" class="button" bindtap="onButton">
         <property name="rect">116, 139, 30, 30</property>
         <property name="foreground">255, 0, 0, 0</property>
         <property name="background">255, 212, 208, 200</property>
         <property name="font">/system/fonts/HYQIHEI-55J.TTF,16</property>
+        <property name="hide"/>
         <property name="longPressMs">100</property>
-        <property name="text">Left</property>
+        <property name="text">left</property>
         <property name="norImg">images/norImg.png</property>
         <property name="downImg">images/downImg.png</property>
         <property name="align">HORIZONTAL | VERTICAL</property>
       </widget>
-      <widget name="buttonRight" class="button" bindtap="onButton">
+      <widget name="rightButton" class="button" bindtap="onButton">
         <property name="rect">189, 139, 30, 30</property>
         <property name="foreground">255, 0, 0, 0</property>
         <property name="background">255, 212, 208, 200</property>
         <property name="font">/system/fonts/HYQIHEI-55J.TTF,16</property>
+        <property name="hide"/>
         <property name="longPressMs">100</property>
-        <property name="text">Right</property>
+        <property name="text">right</property>
         <property name="norImg">images/norImg.png</property>
         <property name="downImg">images/downImg.png</property>
         <property name="align">HORIZONTAL | VERTICAL</property>
       </widget>
-      <widget name="buttonDown" class="button" bindtap="onButton">
-        <property name="rect">155, 180, 30, 30</property>
+      <widget name="downButton" class="button" bindtap="onButton">
+        <property name="rect">154, 208, 30, 30</property>
         <property name="foreground">255, 0, 0, 0</property>
         <property name="background">255, 212, 208, 200</property>
         <property name="font">/system/fonts/HYQIHEI-55J.TTF,16</property>
+        <property name="hide"/>
         <property name="longPressMs">100</property>
-        <property name="text">Down</property>
+        <property name="text">down</property>
         <property name="norImg">images/norImg.png</property>
         <property name="downImg">images/downImg.png</property>
         <property name="align">HORIZONTAL | VERTICAL</property>

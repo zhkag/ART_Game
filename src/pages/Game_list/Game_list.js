@@ -6,7 +6,8 @@ Page({
     menuIndex: 0,
     GameName: [
         { name: "fly bird" },
-        { name: "2048" }
+        { name: "2048" },
+        { name: "Tetris" }
     ],
 
     /* 页面加载时触发该函数 */
@@ -62,6 +63,9 @@ Page({
                 break;
             case 1:
                 pm.redirectTo({ url: 'pages/Game_2048/Game_2048' });
+                break;
+            case 2:
+                pm.redirectTo({ url: 'pages/Game_Tetris/Game_Tetris' });
                 break;
         }
         if (button_fb_open)

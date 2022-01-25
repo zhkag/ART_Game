@@ -40,6 +40,7 @@
               <widget name="panel2" class="panel">
                 <property name="rect">0, 0, 160, 120</property>
                 <property name="background">0, 212, 208, 200</property>
+                <property name="hide"/>
                 <widgets>
                   <widget name="imagebox1" class="imagebox">
                     <property name="rect">0, 0, 160, 120</property>
@@ -57,6 +58,17 @@
                     <property name="rect">0, 0, 160, 120</property>
                     <property name="background">0, 212, 208, 200</property>
                     <property name="img">images/game_2048.png</property>
+                  </widget>
+                </widgets>
+              </widget>
+              <widget name="panel4" class="panel">
+                <property name="rect">0, 0, 160, 120</property>
+                <property name="background">0, 212, 208, 200</property>
+                <widgets>
+                  <widget name="imagebox3" class="imagebox">
+                    <property name="rect">0, 0, 160, 120</property>
+                    <property name="background">0, 212, 208, 200</property>
+                    <property name="img">images/game_tetris.png</property>
                   </widget>
                 </widgets>
               </widget>
